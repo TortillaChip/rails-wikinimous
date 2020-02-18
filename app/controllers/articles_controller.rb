@@ -29,6 +29,12 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
+  def create
+    @article = Article.create(article_params)
+
+    redirect_to articles_path
+  end
+
   private
 
   def article_params
